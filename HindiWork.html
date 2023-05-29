@@ -1,0 +1,333 @@
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hindi Parichay</title>
+  <script ></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .top {
+      background-color: #33bbff;
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+	
+	.topMiddle{
+		background-color: #ffff4d;
+      flex: 0 0 0%;
+    }
+		
+    .middle {
+      background-color: #ffff4d;
+      flex: 1 0 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      line-height: 30px;
+      text-align: center;
+    }
+
+    .bottom {
+      background-color: #ff9999;
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 30px;
+      font-family: Times New Roman;
+      background-color: #33bbff;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      font-family: Times New Roman;
+      display: none;
+      position: absolute;
+      background-color: #33bbff;
+      min-width: 120px;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .textfield {
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .girl {
+      position: absolute;
+      top: -2%;
+      left: 5%;
+      width: 20%;
+      height: 100%;
+    }
+
+    .boy {
+      position: absolute;
+      top: -3%;
+      left: 75%;
+      width: 20%;
+      height: 100%;
+    }
+    
+	div.gallery {
+	  border: 5px solid #33bbff;
+	  width: 100%;
+	}
+
+	div.gallery:hover {
+	  border: 1px solid #33bbff;
+	}
+
+	div.gallery img {
+	  width: 100%;
+	  height: auto;
+	}
+
+	div.desc {
+	  padding: 15px;
+	  text-align: center;
+	}
+
+	* {
+	  box-sizing: border-box;
+	}
+
+	.arrow {
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  cursor: pointer;
+	  width: 50px;
+	  height: 50px;
+	  background-color: #33bbff;
+	  color: #fff;
+	  font-size: 20px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  z-index: 2;
+	}
+
+	.arrow.prev {
+	  left: 5px;
+	}
+
+	.arrow.next {
+	  right: 5px;
+	}
+
+	.slides-container {
+	  position: relative;
+	  top: 0%;
+	  left: 75%
+	  width: 100%;
+	  height: 100%;
+	}
+
+	.slide {
+	  display: none;
+	  width: 100%;
+	  height: 100%;
+	}
+
+	.slide.active {
+	  display: block;
+	}
+	
+	h4{
+	    text-align:center;
+	    background-color: #ffff4d;
+	    font-size: 25px;
+	}
+	
+	.arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: #33bbff;
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 10px;
+    }
+	
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <div class="girl">
+        <img src="girl.png" alt="">
+      </div>
+      <div class="boy">
+        <img src="boy.png" alt="">
+      </div>
+      <h1>Hindi Parichay</h1>
+      <h1>हिन्दी परिचय</h1>
+      <button class="button" onclick="goToPage('HindiPage.html')" id="button4">Home</button>
+      <button class="button" onclick="goToPage('AboutMe.html')" id="button1">About Me</button>
+      <div class="dropdown">
+        <button class="button">Classes</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="goToPage('Hindilevels.html')">Hindi Levels</a>
+          <a href="#" onclick="goToPage('HindiClasses.html')">Hindi Classes</a>
+        </div>
+      </div>
+      <button class="button" onclick="goToPage('HindiContact.html')" id="button3">Contact</button>
+      <button class="button" onclick="goToPage('HindiWork.html')">Student's Work</button>
+    </div>
+    <div class = "topMiddle">
+    <h4>These are some of student's works from over the years and they are samples of what students
+    have done in different levels.</h4>
+    </div>
+    <div class="middle">
+      <div class="slides-container">
+        <div class="slide active">
+          <div class="gallery">
+            <a target="_blank" href="beginnerOne.jpg">
+              <img src="beginnerOne.jpg" alt="beginnerOne">
+            </a>
+            <div class="desc">This is a beginner student's work and this is a paragraph about a story of a cat and mouse.</div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="gallery">
+            <a target="_blank" href="beginnerTwo.jpg">
+              <img src="beginnerTwo.jpg" alt="beginnerTwo">
+            </a>
+            <div class="desc">This is a beginner student's work and this is a paragraph about a farmer and his son.</div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="gallery">
+            <a target="_blank" href="intermediateOne.jpg">
+              <img src="intermediateOne.jpg" alt="intermediateOne">
+            </a>
+            <div class="desc">This is a beginner-intermediate student's work and these are answers to story's questions.</div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="gallery">
+            <a target="_blank" href="intermediateTwo.jpg">
+              <img src="intermediateTwo.jpg" alt="intermediateTwo">
+            </a>
+            <div class="desc">This is a beginner-intermediate student's work and this is a paragraph about a lion and a hunter.</div>
+          </div>
+        </div>
+        <div class="arrow prev" onclick="prevSlide()">&#8249;</div>
+        <div class="arrow next" onclick="nextSlide()">&#8250;</div>
+      </div>
+    </div>
+    <div class="bottom"></div>
+  </div>
+  <script>
+	  const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(slideIndex) {
+      if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+      } else if (slideIndex >= slides.length) {
+        slideIndex = 0;
+      }
+
+      slides.forEach(slide => {
+        slide.style.display = 'none';
+      });
+
+      slides[slideIndex].style.display = 'block';
+      currentSlide = slideIndex;
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    showSlide(currentSlide);
+
+    // Add event listeners to the arrow elements
+    const prevArrow = document.querySelector('.prev');
+    const nextArrow = document.querySelector('.next');
+
+    prevArrow.addEventListener('click', prevSlide);
+    nextArrow.addEventListener('click', nextSlide);
+	var value = 0;
+	value = parseInt(localStorage.getItem("myValue"));
+	function goToPage(nextPage)
+	{
+		localStorage.setItem("myValue", value);
+		window.location.href = nextPage;
+		location.replace(nextPage);
+		
+	}
+
+	document.getElementById("button1").addEventListener("click", function() {
+	  growButton("button1");
+	});
+
+	document.getElementById("button2").addEventListener("click", function() {
+	  growButton("button2");
+	});
+
+	document.getElementById("button3").addEventListener("click", function() {
+	  growButton("button3");
+	});
+
+	document.getElementById("button4").addEventListener("click", function() {
+	  growButton("button4");
+	});
+	
+    </script>
+</body>
+</html>

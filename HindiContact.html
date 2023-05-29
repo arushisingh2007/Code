@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hindi Parichay</title>
+  <script src = "hindiPage.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    
+    h1{
+		font-size: 40px;
+	}
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .top {
+      background-color: #33bbff;
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .middle {
+      background-color: #ffff4d;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 20px;
+      line-height: 30px;
+      text-align: center;
+    }
+    
+    .bottom {
+      background-color: #ff9999;
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 30px;
+      font-family: Times New Roman;
+      background-color: #33bbff;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    
+    .button:hover {
+      transform: scale(1.1);
+    }
+    
+    .dropdown {
+	   position: relative;
+       display: inline-block;
+	}
+
+    .dropdown-content {
+		  font-family: Times New Roman;
+		  display: none;
+		  position: absolute;
+		  background-color: #33bbff;
+		  min-width: 120px;
+		  padding: 10px;
+		  z-index: 1;
+     }
+     
+     .dropdown:hover .dropdown-content {
+		display: block;
+	}
+    .textfield {
+      font-size: 30px;
+    
+    }
+    .girl
+	{
+	  position: absolute; 
+	  top: -2%; 
+	  left: 5%; 
+	  width: 20%; 
+	  height: 100%;
+	}
+	
+	.boy
+	{
+	  position: absolute; 
+	  top: -3%; 
+	  left: 75%; 
+	  width: 20%; 
+	  height: 100%;
+	}
+		
+		
+	 #message {
+      width: 500px; 
+      height: 100px;
+    }
+    
+    #email{
+	  width: 200px; 
+      height: 25px;
+    }
+	
+	.sButton{
+		font-size: 20px;
+		background-color: #33bbff;
+	}
+	
+  </style> 
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+	  <div class="girl">
+	    <img src="girl.png" alt="">
+	  </div>
+	  <div class="boy">
+	    <img src="boy.png" alt="">
+	  </div>
+      <h1>Hindi Parichay</h1>
+      <h1>हिन्दी परिचय</h1>
+      <button class="button" onclick = "goToPage('HindiPage.html')" id="button4">Home</button>
+      <button class="button" onclick = "goToPage('AboutMe.html')" id="button1">About Me</button>
+      <div class="dropdown">
+		<button class="button">Classes</button>
+		<div class="dropdown-content">
+			<a href="#" onclick = "goToPage('Hindilevels.html')">Hindi Levels</a>
+			<a href="#" onclick = "goToPage('HindiClasses.html')">Hindi Classes</a>
+		 </div>
+	  </div>
+      <button class="button" onclick = "goToPage('HindiContact.html')" id="button3">Contact</button>
+      <button class="button" onclick = "goToPage('HindiWork.html')">Student's Work</button>
+    </div>
+    
+    <div class="middle">
+		<form>
+			<p class="textfield"><strong>If you are interested in registering
+		    or have any questions enter your email below and message to send 
+		    an email at: sh.yogita@yahoo.com!</strong></p>
+			<label for="email">Email:</label><br>
+			<input type="email" id="email" required><br>
+			<br>
+			<label for="message">Message:</label><br>
+			<textarea id="message" required></textarea><br>
+			<br>
+			<button class = "button" type="button" onclick="sendEmail()">Submit</button>
+			<p id="error" style="color: red;"></p>
+		</form>
+    </div>
+    
+    <div class="bottom"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

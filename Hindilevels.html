@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hindi Parichay</title>
+  <script src = "hindiPage.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    
+    h1{
+		font-size: 40px;
+	}
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .top {
+      background-color: #33bbff;
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .middle {
+      background-color: #ffff4d;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 20px;
+      line-height: 30px;
+      text-align: left;
+    }
+    
+    .bottom {
+      background-color: #ff9999;
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 30px;
+      font-family: Times New Roman;
+      background-color: #33bbff;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    
+    .button:hover {
+      transform: scale(1.1);
+    }
+    
+    .dropdown {
+	   position: relative;
+       display: inline-block;
+	}
+
+    .dropdown-content {
+		  font-family: Times New Roman;
+		  display: none;
+		  position: absolute;
+		  background-color: #33bbff;
+		  min-width: 120px;
+		  padding: 10px;
+		  z-index: 1;
+     }
+     
+     .dropdown:hover .dropdown-content {
+		display: block;
+	}
+    .textfield {
+      font-size: 19px;
+    
+    }
+    .girl
+	{
+	  position: absolute; 
+	  top: -2%; 
+	  left: 5%; 
+	  width: 20%; 
+	  height: 100%;
+	}
+	
+	.boy
+	{
+	  position: absolute; 
+	  top: -3%; 
+	  left: 75%; 
+	  width: 20%; 
+	  height: 100%;
+	}
+		
+		
+
+	
+  </style> 
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+	  <div class="girl">
+	    <img src="girl.png" alt="">
+	  </div>
+	  <div class="boy">
+	    <img src="boy.png" alt="">
+	  </div>
+      <h1>Hindi Parichay</h1>
+      <h1>हिन्दी परिचय</h1>
+      <button class="button" onclick = "goToPage('HindiPage.html')" id="button4">Home</button>
+      <button class="button" onclick = "goToPage('AboutMe.html')" id="button1">About Me</button>
+      <div class="dropdown">
+		<button class="button">Classes</button>
+		<div class="dropdown-content">
+			<a href="#" onclick = "goToPage('Hindilevels.html')">Hindi Levels</a>
+			<a href="#" onclick = "goToPage('HindiClasses.html')">Hindi Classes</a>
+		 </div>
+	  </div>
+      <button class="button" onclick = "goToPage('HindiContact.html')" id="button3">Contact</button>
+      <button class="button" onclick = "goToPage('HindiWork.html')">Student's Work</button>
+    </div>
+    
+    <div class="middle">
+      <p class="textfield">Hindi Parichay has several levels that students fall under. Check the 
+      descriptions below to see which Hindi level your child should take.
+      <br><br><strong>Beginner:</strong> Students in this level will learn the basics of Hindi 
+      such as the alphabet, vowels, consonants, numbers, and more. They will be able to learn basic
+      vocabulary such as numbers, greetings, colors, fruits, vegetables, days of the week, and 
+      many more common objects. Students will also learn basic grammatical structure of sentences
+      and verb conjugation. At the end of this level, students will be able to engage in basic
+      Hindi conversations, create their own sentences, and identify everyday objects around them.<br>
+      <strong><br>Intermediate:</strong> Students in the intermediate level will expand their vocabulary
+      to more complex everyday situations and increase their knowledge of sentence structure and
+      verb conjugations. They will also be able to read longer stories and also write more complex
+      setences. Students will also be able to speak more fluently and confidentally as well.
+      <br><br><strong>Advanced:</strong> Students who are in the advanced level will refine
+      their speaking skills by participating in in-depth conversatoins. They will also be able
+      to read novels along with being able to write essays. Students will focus on advanced
+      grammar structures and focus on complex sentence patterns. </p>
+    </div>
+    
+    <div class="bottom"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

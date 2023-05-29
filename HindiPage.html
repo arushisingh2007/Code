@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hindi Parichay</title>
+  <script src = "hindiPage.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    
+    h1 {
+      font-size: 40px;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .top {
+      background-color: #33bbff;
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .middle {
+      background-color: #ffff4d;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 20px;
+      line-height: 40px;
+      text-align: left;
+    }
+    
+    .bottom {
+      background-color: #ff9999;
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 30px;
+      font-family: Times New Roman;
+      background-color: #33bbff;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    
+    .button:hover {
+      transform: scale(1.1);
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      font-family: Times New Roman;
+      display: none;
+      position: absolute;
+      background-color: #33bbff;
+      min-width: 120px;
+      padding: 10px;
+      z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .textfield {
+      font-size: 24px;
+    }
+    
+    .girl {
+      position: absolute;
+      top: -2%;
+      left: 5%;
+      width: 20%;
+      height: auto;
+    }
+    
+    .boy {
+      position: absolute;
+      top: -3%;
+      left: 75%;
+      width: 20%;
+      height: auto;
+    }
+    
+    .tree {
+      position: absolute;
+      top: 37%;
+      left: 65%;
+      width: 30%;
+      height: auto;
+    }
+	
+  </style> 
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+	  <div class="girl">
+	    <img src="girl.png" alt="">
+	  </div>
+	  <div class="boy">
+	    <img src="boy.png" alt="">
+	  </div>
+      <h1>Hindi Parichay</h1>
+      <h1>हिन्दी परिचय</h1>
+      <button class="button" onclick = "goToPage('HindiPage.html')" id="button4">Home</button>
+      <button class="button" onclick = "goToPage('AboutMe.html')" id="button1">About Me</button>
+      <div class="dropdown">
+		<button class="button">Classes</button>
+		<div class="dropdown-content">
+			<a href="#" onclick = "goToPage('Hindilevels.html')">Hindi Levels</a>
+			<a href="#" onclick = "goToPage('HindiClasses.html')">Hindi Classes</a>
+		 </div>
+	  </div>
+      <button class="button" onclick = "goToPage('HindiContact.html')" id="button3">Contact</button>
+      <button class="button" onclick = "goToPage('HindiWork.html')">Student's Work</button>
+     
+    </div>
+    
+    <div class="middle">
+      <p class="textfield"><i>Interested in helping your child learn 
+      Hindi while living in the U.S.?</i><br>These Hindi Parichay classes
+      can help your child learn how to write, read, and <br>speak fluently 
+      in Hindi. We have classes for every level of students that your 
+      child<br>has in Hindi from beginner to advanced. Hindi Parichay has
+      been providing classes <br>for students for over 7 years and Hindi Parichay
+      uses their own material and <br>curriculum which ensures that students 
+      are immersed in the language and can <br> learn how to read,
+      speak, and write Hindi.</p>
+      <div class="tree">
+	    <img src="tree.png" alt="">
+	  </div>
+    </div>
+    
+    <div class="bottom"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
